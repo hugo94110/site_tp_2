@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> <!--IMPORT de la librairie qui permet d'afficher les coeurs (fontawesome.com)-->
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/tailspin.js"></script> <!--IMPORT pour le loader (uiball.com)-->
+
+    <title>Uber eats</title>
+</head>
+<body>
+    <!-- DIV qui permet de créer et de gérer le loader-->
+    <div class="loading">
+        <l-tailspin class="loading-image" size="65" stroke="8" speed="1.3" color="#06C167" ></l-tailspin>
+    </div>
+    
+    <header>
+
+        <div class="localisation">
+            <img src="assets/location-pin.png" alt="Pin de localisation">
+            <h2>
+                Paris, Belleville
+            </h2>
+        </div>
+
+        <section class="banniere">
+            <img src="assets/food.jpg" alt="Table sur laquelle est disposé de la nourriture">
+            <div class="overlay"></div>
+            <h1>Réserver le menu qui vous convient</h1>
+            <h2>Découvrez des restaurants d'exception, sélectionnés par nos soins. </h2>
+            <button type="button">Explorer nos restaurants</button>
+        </section>
+
+    </header>
+    <main>
+
+        <h1 class="title">Fonctionnement</h1>
+
+        <section class="article-container">
+            <article class="card_func">
+                <div><p>1</p></div>
+                <img src="assets/mobile-grey.png" alt="Icone de téléphone portable">
+                <h1>Choisissez un restaurant</h1>
+            </article>
+            <article class="card_func">
+                <div><p>2</p></div>
+                <img src="assets/bullet-list-grey.png" alt="Icone de liste à puces">
+                <h1>Composez votre menu</h1>
+            </article>
+            <article class="card_func">
+                <div><p>3</p></div>
+                <img src="assets/store-grey.png" alt="Icone de magasin">
+                <h1>Dégustez au restaurant</h1>
+            </article>
+        </section>
+
+        <h1 class="title">Restaurants</h1>
+
+        <section class="affiche">
+            <article class="card">
+                <img src="assets/loaf-2796393_1920.jpg" alt="Restaurant 1">
+                <div class="card-content">
+                    <div class="text-content">
+                        <h2>La palette du goût</h2>
+                        <p>Environ 20-30 € par pers.</p>
+                    </div>
+                    <div class="heart-container">
+                        <i class="fa-regular fa-heart heart-empty"></i>
+                        <i class="fa-solid fa-heart heart-full"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/mix-grill-7414547_1920.jpg" alt="Restaurant 2">
+                <div class="card-content">
+                    <div class="text-content">
+                        <h2>La note enchantée</h2>
+                        <p>Environ 10-20 € par pers.</p>
+                    </div>
+                    <div class="heart-container">
+                        <i class="fa-regular fa-heart heart-empty"></i>
+                        <i class="fa-solid fa-heart heart-full"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/platter-2009590_1920.jpg" alt="Restaurant 3">
+                <div class="card-content">
+                    <div class="text-content">
+                        <h2>À la Française</h2>
+                        <p>Environ 20-30 € par pers.</p>
+                    </div>
+                    <div class="heart-container">
+                        <i class="fa-regular fa-heart heart-empty"></i>
+                        <i class="fa-solid fa-heart heart-full"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/korean-food-822092_1920.jpg" alt="Restaurant 4">
+                <div class="card-content">
+                    <div class="text-content">
+                        <h2>Les délices de Sophie</h2>
+                        <p>Environ 30-40 € par pers.</p>
+                    </div>
+                    <div class="heart-container">
+                        <i class="fa-regular fa-heart heart-empty"></i>
+                        <i class="fa-solid fa-heart heart-full"></i>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <a href="#">Proposer un restaurant</a>
+        <a href="#">Devenir partenaire</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Contact</a>
+    </footer>
+    <!--<script>
+        /*Version sans timer*/
+        window.addEventListener('load', function() {
+            const loadingDiv = document.querySelector('.loading');
+            loadingDiv.style.display = 'none';
+        });
+    </script>-->
+    <script>
+        /*Ajout d'un timer pour pouvoir bien observer le loader*/
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loadingDiv = document.querySelector('.loading');
+                loadingDiv.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
